@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -218,11 +217,7 @@ const Contact = () => {
                         +91 7739412888
                       </a>
                     </p>
-                    <p className="text-brand-700">
-                      <a href="tel:+917739412888" className="hover:text-brand-600">
-                        +91 7739412888
-                      </a>
-                    </p>
+                
                   </div>
                 </div>
                 
@@ -268,17 +263,6 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="bg-cream-200 py-12">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-6 text-center font-playfair">Our Location</h2>
-            <div className="bg-white rounded-lg overflow-hidden shadow-md h-[400px] flex items-center justify-center">
             </div>
           </div>
         </div>

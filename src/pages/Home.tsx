@@ -524,7 +524,7 @@ const Home = () => {
       </section>
 
       {/* Events and Offers Section */}
-      <section className="py-20 md:py-28 bg-white relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-white relative overflow-hidden">
         <motion.div 
           className="absolute top-20 left-[10%] w-96 h-96 rounded-full bg-purple-200 mix-blend-multiply filter blur-[100px] opacity-30"
           animate={{ 
@@ -545,7 +545,7 @@ const Home = () => {
         
         <div className="container-custom relative z-10">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -559,7 +559,7 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-10 mb-12">
+          <div className="grid md:grid-cols-2 gap-10">
             {eventsAndOffers.map((item, index) => (
               <motion.div
                 key={item.id}
@@ -610,25 +610,11 @@ const Home = () => {
               </motion.div>
             ))}
           </div>
-
-          <motion.div 
-            className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <Link to="/events">
-              <Button variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-4 text-lg shadow-md hover:shadow-lg transition-all duration-300">
-                View All Events & Offers
-              </Button>
-            </Link>
-          </motion.div>
         </div>
       </section>
 
-      {/* About Snippet with Animation - Removed Team Section */}
-      <section className="py-24 md:py-32 bg-white relative overflow-hidden">
+      {/* About Snippet with Animation */}
+      <section className="py-16 md:py-24 bg-white relative overflow-hidden">
         <motion.div 
           className="absolute top-40 right-[20%] w-96 h-96 rounded-full bg-cream-300 mix-blend-multiply filter blur-[100px] opacity-30"
           animate={{ 

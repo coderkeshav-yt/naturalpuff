@@ -123,7 +123,7 @@ const About = () => {
             >
               <div className="mb-6 mx-auto md:mx-0 w-48 h-48 rounded-full overflow-hidden border-4 border-brand-100">
                 <img 
-                  src="https://res.cloudinary.com/dlvxjnycr/image/upload/v1745910080/5_tdxi1b.jpg" 
+                  src="https://res.cloudinary.com/dlvxjnycr/image/upload/v1746450710/Screenshot_2025-05-05_184100_ssvwxw.png" 
                   alt="Animesh Doshi" 
                   className="w-full h-full object-cover"
                 />
@@ -131,8 +131,8 @@ const About = () => {
               <h3 className="text-2xl font-bold text-brand-800 mb-2">Animesh Doshi</h3>
               <p className="text-brand-600 font-medium mb-4">Founder & CEO</p>
               <p className="text-brand-700 mb-4">
-                With a passion for healthy eating and sustainability, Animesh founded Natural Puff 
-                to revolutionize snacking with nutritious and delicious makhana products.
+              Animesh is a seasoned entrepreneur with over 10+ years of experience in the distribution of leading multi-brand FMCG products. His deep expertise in supply chain management, marketing, and business development laid the foundation for Natural Puff. With a clear vision for delivering healthy and high-quality snacks, Animesh leads the brand’s growth, innovation, and long-term strategy.
+
               </p>
             </motion.div>
 
@@ -154,9 +154,7 @@ const About = () => {
               <h3 className="text-2xl font-bold text-brand-800 mb-2">Ravi Prakash</h3>
               <p className="text-brand-600 font-medium mb-4">Co-founder & COO</p>
               <p className="text-brand-700 mb-4">
-                A food industry expert with over 10 years of experience, Ravi brings his knowledge of 
-                supply chain optimization and product development to ensure Natural Puff delivers 
-                exceptional quality in every pack.
+              Ravi brings an unwavering focus on health, consistency, and excellence. His commitment to clean, wholesome snacking ensures that every product from Natural Puff meets the highest quality standards. Ravi’s attention to detail and dedication to customer satisfaction play a vital role in the brand’s promise of purity and taste.
               </p>
             </motion.div>
           </div>

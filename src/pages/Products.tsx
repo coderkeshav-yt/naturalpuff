@@ -36,6 +36,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { Textarea } from '@/components/ui/textarea';
 
 interface Product {
   id: number;
@@ -82,6 +83,15 @@ const Products = () => {
     maxPrice: null,
   });
   const [showFilters, setShowFilters] = useState(false);
+  const [showWholesaleForm, setShowWholesaleForm] = useState(false);
+  const [wholesaleFormData, setWholesaleFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const { addItem } = useCart();
   const { toast } = useToast();
@@ -339,6 +349,36 @@ const Products = () => {
       </div>
     </motion.div>
   );
+
+  const handleWholesaleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setWholesaleFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleWholesaleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate API call
+    setTimeout(() => {
+      toast({
+        title: "Inquiry Sent!",
+        description: "Thank you for your interest. Our team will contact you soon.",
+      });
+      setWholesaleFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        message: ''
+      });
+      setIsSubmitting(false);
+      setShowWholesaleForm(false);
+    }, 1500);
+  };
 
   if (loading) {
     return (
@@ -750,12 +790,109 @@ const Products = () => {
               We offer special pricing for bulk orders and retail partnerships. 
               Get in touch with our team to discuss how we can work together.
             </p>
-            <Button className="bg-gold-500 hover:bg-gold-600 text-brand-800 px-8 py-6 text-lg">
+            <Button 
+              className="bg-gold-500 hover:bg-gold-600 text-brand-800 px-8 py-6 text-lg"
+              onClick={() => setShowWholesaleForm(true)}
+            >
               Contact Sales Team
             </Button>
           </motion.div>
         </div>
       </section>
+
+      {/* Wholesale Form Dialog */}
+      <Dialog open={showWholesaleForm} onOpenChange={setShowWholesaleForm}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold font-playfair text-brand-800">Wholesale Inquiry</DialogTitle>
+          </DialogHeader>
+          <form onSubmit={handleWholesaleSubmit} className="space-y-6 mt-4">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-brand-700 mb-1">
+                Full Name*
+              </label>
+              <Input
+                id="name"
+                name="name"
+                value={wholesaleFormData.name}
+                onChange={handleWholesaleFormChange}
+                placeholder="Your full name"
+                className="w-full"
+                required
+              />
+            </div>
+            
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-brand-700 mb-1">
+                Email Address*
+              </label>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                value={wholesaleFormData.email}
+                onChange={handleWholesaleFormChange}
+                placeholder="Your email address"
+                className="w-full"
+                required
+              />
+            </div>
+            
+            <div>
+              <label htmlFor="phone" className="block text-sm font-medium text-brand-700 mb-1">
+                Phone Number*
+              </label>
+              <Input
+                id="phone"
+                name="phone"
+                value={wholesaleFormData.phone}
+                onChange={handleWholesaleFormChange}
+                placeholder="Your phone number"
+                className="w-full"
+                required
+              />
+            </div>
+            
+            <div>
+              <label htmlFor="company" className="block text-sm font-medium text-brand-700 mb-1">
+                Company Name*
+              </label>
+              <Input
+                id="company"
+                name="company"
+                value={wholesaleFormData.company}
+                onChange={handleWholesaleFormChange}
+                placeholder="Your company name"
+                className="w-full"
+                required
+              />
+            </div>
+            
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-brand-700 mb-1">
+                Message*
+              </label>
+              <Textarea
+                id="message"
+                name="message"
+                value={wholesaleFormData.message}
+                onChange={handleWholesaleFormChange}
+                placeholder="Tell us about your business and requirements"
+                className="w-full min-h-[100px]"
+                required
+              />
+            </div>
+            
+            <Button 
+              type="submit" 
+              className="w-full bg-brand-600 hover:bg-brand-700 text-white py-6"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Sending...' : 'Submit Inquiry'}
+            </Button>
+          </form>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

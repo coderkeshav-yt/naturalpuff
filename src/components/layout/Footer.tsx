@@ -40,8 +40,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-playfair font-bold mb-4">Contact Us</h4>
             <address className="not-italic text-cream-300 space-y-2">
-              <p>123 Snack Street</p>
-              <p>Mumbai, Maharashtra 400001</p>
+              <p>Shubhankarpur </p>
+              <p> Darbhanga,  Bihar 846004
+              </p>
               <p>India</p>
               <p className="pt-2">
                 <a href="mailto:info@naturalpuff.com" className="hover:text-white transition-colors">
@@ -49,8 +50,8 @@ const Footer = () => {
                 </a>
               </p>
               <p>
-                <a href="tel:+919876543210" className="hover:text-white transition-colors">
-                  +91 98765 43210
+                <a href="tel:+917739412888" className="hover:text-white transition-colors">
+                  +91 7739412888
                 </a>
               </p>
             </address>

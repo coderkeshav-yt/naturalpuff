@@ -147,14 +147,14 @@ const About = () => {
               <div className="mb-6 mx-auto md:mx-0 w-48 h-48 rounded-full overflow-hidden border-4 border-brand-100">
                 <img 
                   src="https://res.cloudinary.com/dlvxjnycr/image/upload/v1746438074/WhatsApp_Image_2025-05-05_at_14.47.13_4e153e55_jvcaar.jpg" 
-                  alt="Rahul Prakash" 
+                  alt="Ravi Prakash" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-brand-800 mb-2">Rahul Prakash</h3>
+              <h3 className="text-2xl font-bold text-brand-800 mb-2">Ravi Prakash</h3>
               <p className="text-brand-600 font-medium mb-4">Co-founder & COO</p>
               <p className="text-brand-700 mb-4">
-                A food industry expert with over 10 years of experience, Rahul brings his knowledge of 
+                A food industry expert with over 10 years of experience, Ravi brings his knowledge of 
                 supply chain optimization and product development to ensure Natural Puff delivers 
                 exceptional quality in every pack.
               </p>

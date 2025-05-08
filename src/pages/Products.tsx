@@ -103,6 +103,24 @@ const Products = () => {
     fetchProducts();
   }, []);
 
+  // Helper to ensure only 'Assorted Pack' is in stock and all others are out of stock
+  const ensureOnlyAssortedPackInStock = (products: Product[]): Product[] => {
+    return products.map(product => {
+      if (product.name === 'Assorted Pack') {
+        return {
+          ...product,
+          stock: 10, // In stock
+          price: 250,
+        };
+      } else {
+        return {
+          ...product,
+          stock: 0, // Out of stock
+        };
+      }
+    });
+  };
+
   const fetchProducts = async () => {
     try {
       setLoading(true);
@@ -131,10 +149,9 @@ const Products = () => {
 
       if (data) {
         // Transform data to add ratings, discounts, and Cloudinary images
-        const productsWithImages = data.map(product => {
+        let productsWithImages = data.map(product => {
           // Get a random Cloudinary image URL
           const randomImageUrl = cloudinaryImages[Math.floor(Math.random() * cloudinaryImages.length)];
-          
           return {
             ...product,
             image_url: randomImageUrl,
@@ -142,7 +159,8 @@ const Products = () => {
             discount_percent: Math.floor(Math.random() * 10) + 5
           };
         });
-
+        // Ensure only 'Assorted Pack' is in stock
+        productsWithImages = ensureOnlyAssortedPackInStock(productsWithImages);
         setProducts(productsWithImages);
       }
     } catch (error) {
@@ -315,9 +333,11 @@ const Products = () => {
         <div className="flex justify-between items-start mb-2">
           <h3 className="text-xl font-bold font-playfair">{product.name}</h3>
           <div className="flex flex-col items-end">
-            <div className="text-lg font-bold text-red-600">
-              Out of Stock
-            </div>
+            {product.stock && product.stock > 0 ? (
+              <div className="text-lg font-bold text-green-600">In Stock</div>
+            ) : (
+              <div className="text-lg font-bold text-red-600">Out of Stock</div>
+            )}
             {product.discount_percent && (
               <div className="text-xs text-green-600 font-medium">
                 {product.discount_percent}% off
@@ -338,13 +358,23 @@ const Products = () => {
           >
             View Details
           </Button>
-          <Button
-            variant="outline"
-            className="border-gray-400 text-gray-400 cursor-not-allowed"
-            disabled
-          >
-            Out of Stock
-          </Button>
+          {product.stock && product.stock > 0 ? (
+            <Button
+              variant="outline"
+              className="border-brand-600 text-brand-600"
+              onClick={() => handleAddToCart(product)}
+            >
+              Add to Cart
+            </Button>
+          ) : (
+            <Button
+              variant="outline"
+              className="border-gray-400 text-gray-400 cursor-not-allowed"
+              disabled
+            >
+              Out of Stock
+            </Button>
+          )}
         </div>
       </div>
     </motion.div>
@@ -558,9 +588,13 @@ const Products = () => {
                       <div>
                         <div className="flex justify-between items-center mb-4">
                           <p className="text-brand-700">{selectedProduct.description}</p>
-                          <div className="text-xl font-bold text-red-600">
-                            Out of Stock
-                          </div>
+                          {selectedProduct.name === 'Assorted Pack' && selectedProduct.stock && selectedProduct.stock > 0 ? (
+                            <div className="text-xl font-bold text-green-600">₹250</div>
+                          ) : (
+                            <div className="text-xl font-bold text-red-600">
+                              Out of Stock
+                            </div>
+                          )}
                         </div>
                         
                         {selectedProduct.variants && selectedProduct.variants.length > 0 && (
@@ -600,12 +634,21 @@ const Products = () => {
                         )}
 
                         <div className="mt-6">
-                          <Button 
-                            className="w-full bg-gray-400 text-white cursor-not-allowed"
-                            disabled
-                          >
-                            Out of Stock
-                          </Button>
+                          {selectedProduct.stock && selectedProduct.stock > 0 ? (
+                            <Button
+                              className="w-full bg-brand-600 text-white"
+                              onClick={() => handleAddToCart(selectedProduct)}
+                            >
+                              Add to Cart
+                            </Button>
+                          ) : (
+                            <Button
+                              className="w-full bg-gray-400 text-white cursor-not-allowed"
+                              disabled
+                            >
+                              Out of Stock
+                            </Button>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -641,9 +684,13 @@ const Products = () => {
                       <div>
                         <div className="flex justify-between items-center mb-4">
                           <p className="text-brand-700">{selectedProduct.description}</p>
-                          <div className="text-xl font-bold text-red-600">
-                            Out of Stock
-                          </div>
+                          {selectedProduct.name === 'Assorted Pack' && selectedProduct.stock && selectedProduct.stock > 0 ? (
+                            <div className="text-xl font-bold text-green-600">₹250</div>
+                          ) : (
+                            <div className="text-xl font-bold text-red-600">
+                              Out of Stock
+                            </div>
+                          )}
                         </div>
                         
                         {selectedProduct.variants && selectedProduct.variants.length > 0 && (
@@ -683,12 +730,21 @@ const Products = () => {
                         )}
 
                         <div className="mt-6">
-                          <Button 
-                            className="w-full bg-gray-400 text-white cursor-not-allowed"
-                            disabled
-                          >
-                            Out of Stock
-                          </Button>
+                          {selectedProduct.stock && selectedProduct.stock > 0 ? (
+                            <Button
+                              className="w-full bg-brand-600 text-white"
+                              onClick={() => handleAddToCart(selectedProduct)}
+                            >
+                              Add to Cart
+                            </Button>
+                          ) : (
+                            <Button
+                              className="w-full bg-gray-400 text-white cursor-not-allowed"
+                              disabled
+                            >
+                              Out of Stock
+                            </Button>
+                          )}
                         </div>
                       </div>
                     </div>

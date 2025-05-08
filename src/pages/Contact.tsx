@@ -171,12 +171,31 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium mb-1 font-playfair">Office Address</h3>
+                    <h3 className="text-lg font-medium mb-1 font-playfair">Office Address 1: </h3>
                     <address className="not-italic text-brand-700">
                       <p>Shubhankarpur </p>
                       <p> Darbhanga,Bihar 846004
                       </p>
                       <p>India</p>
+                    </address>
+                  </div>
+                </div>
+                
+                {/* Second Office Address */}
+                <div className="flex mt-4">
+                  <div className="mr-4 bg-brand-100 rounded-full p-3">
+                    <svg className="h-6 w-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-medium mb-1 font-playfair">Office Address 2: </h3>
+                    <address className="not-italic text-brand-700">
+                      <p>ANIMESH AGENCIES,</p>
+                      <p>AMARSINH COLONY, MALEGAON BK,</p>
+                      <p>BARAMATI, PUNE, Maharashtra-413115</p>
+                      <p><span className="font-bold">Phone:</span> 8530398939</p>
                     </address>
                   </div>
                 </div>

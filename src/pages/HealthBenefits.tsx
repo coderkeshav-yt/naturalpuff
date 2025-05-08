@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -15,6 +14,7 @@ import {
 
 // Placeholder image
 const healthHeroImage = '/placeholder.svg';
+const healthImage = "https://res.cloudinary.com/dlvxjnycr/image/upload/v1746679446/benifit_siynq2.jpg";
 
 const HealthBenefits = () => {
   const benefits = [
@@ -101,8 +101,8 @@ const HealthBenefits = () => {
             <div className="w-full lg:w-1/2">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src={healthHeroImage} 
-                  alt="Makhana Health Benefits" 
+                  src={healthImage} 
+                  alt="Health Benefits of Makhana" 
                   className="w-full h-auto"
                 />
               </div>

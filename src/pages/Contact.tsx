@@ -173,10 +173,10 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-medium mb-1 font-playfair">Office Address 1: </h3>
                     <address className="not-italic text-brand-700">
+                    <p>Natural Puff,</p>
                       <p>Shubhankarpur </p>
                       <p> Darbhanga,Bihar 846004
                       </p>
-                      <p>India</p>
                     </address>
                   </div>
                 </div>
@@ -192,10 +192,10 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-medium mb-1 font-playfair">Office Address 2: </h3>
                     <address className="not-italic text-brand-700">
-                      <p>ANIMESH AGENCIES,</p>
-                      <p>AMARSINH COLONY, MALEGAON BK,</p>
-                      <p>BARAMATI, PUNE, Maharashtra-413115</p>
-                      <p><span className="font-bold">Phone:</span> 8530398939</p>
+                      <p>Animesh Agencies,</p>
+                      <p>Amarsinh Colony , Malegaon BK , </p>
+                      <p>Baramati , Pune , Maharashtra-413115</p>
+                    
                     </address>
                   </div>
                 </div>
@@ -234,9 +234,13 @@ const Contact = () => {
                     <p className="text-brand-700">
                       <a href="tel:+917739412888" className="hover:text-brand-600">
                         +91 7739412888
-                      </a>
+                      </a> 
                     </p>
-                
+                    <p className="text-brand-700">
+                      <a href="tel:+918530398939" className="hover:text-brand-600">
+                        +91 8530398939
+                      </a> 
+                    </p>
                   </div>
                 </div>
                 

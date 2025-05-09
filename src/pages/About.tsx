@@ -56,7 +56,7 @@ const About = () => {
             <div className="w-full lg:w-1/2">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src={storyImage} 
+                  src="https://res.cloudinary.com/dlvxjnycr/image/upload/v1746699710/puff_02_gono4m.jpg" 
                   alt="The beginning of Natural Puff" 
                   className="w-full h-auto"
                 />
@@ -64,7 +64,9 @@ const About = () => {
             </div>
             <div className="w-full lg:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold mb-3 font-playfair">Our Beginning</h2>
-              <div className="w-20 h-1 bg-gold-500 mb-6"></div>
+              <div className="w-20 h-1 bg-gold-500 mb-6">
+                
+              </div>
               <p className="text-lg text-brand-700 mb-6">
                 Natural Puff began in 2022 in Darbhanga, where our founder 
                 Animesh Doshi experimented with different flavors and roasting techniques 
@@ -84,7 +86,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Meet Our Team section - Moved from Home page */}
+      {/* Meet Our Team section  */}
       <section className="py-24 md:py-32 bg-cream-200 relative overflow-hidden">
         <motion.div 
           className="absolute top-40 right-[20%] w-96 h-96 rounded-full bg-cream-300 mix-blend-multiply filter blur-[100px] opacity-30"
@@ -168,7 +170,7 @@ const About = () => {
             <div className="w-full lg:w-1/2">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src={founderImage} 
+                  src="https://res.cloudinary.com/dlvxjnycr/image/upload/v1746701162/dish_wjnf15.png" 
                   alt="Animesh Doshi, Founder of Natural Puff" 
                   className="w-full h-auto"
                 />
@@ -204,7 +206,7 @@ const About = () => {
             <div className="w-full lg:w-1/2">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src={valuesImage} 
+                  src="https://res.cloudinary.com/dlvxjnycr/image/upload/v1746699710/puff_02_gono4m.jpg" 
                   alt="Natural Puff Values" 
                   className="w-full h-auto"
                 />
@@ -271,7 +273,7 @@ const About = () => {
             <div className="w-full lg:w-1/2">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src={qualityImage} 
+                  src="https://res.cloudinary.com/dlvxjnycr/image/upload/v1746701162/dish_wjnf15.png" 
                   alt="Our Quality Commitment" 
                   className="w-full h-auto"
                 />

@@ -63,23 +63,23 @@ const About = () => {
               </div>
             </div>
             <div className="w-full lg:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-3 font-playfair">Our Beginning</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-3 font-playfair">Our Beginning: Where Flavor Met Heritage
+</h2>
               <div className="w-20 h-1 bg-gold-500 mb-6">
                 
               </div>
               <p className="text-lg text-brand-700 mb-6">
-                Natural Puff began in 2022 in Darbhanga, where our founder 
-                Animesh Doshi experimented with different flavors and roasting techniques 
-                to create the perfect healthy snack.
+                The journey of Natural Puff began in 2024, amidst the vibrant landscapes of Darbhanga village in Bihar. Animesh and Ravi, long-time close friends, shared a deep appreciation for wellness and purposeful living.
+
               </p>
               <p className="text-lg text-brand-700 mb-6">
-                After months of perfecting recipes and sharing them with friends and family, 
-                the overwhelming positive response inspired Animesh to transform his passion 
-                project into a full-fledged business with a mission to revolutionize healthy snacking in India.
+During a casual conversation, Ravi—keen to showcase his roots—invited Animesh, who was based in Pune at the time, on a tour of Bihar. That visit would spark something remarkable.
+</p><p>
+It all started with a single bite of Makhana—a humble yet powerful local delicacy that instantly captured Animesh’s curiosity. As a proud native of Darbhanga and a passionate advocate for healthy living, Ravi introduced him not just to Makhana’s flavor, but to its entire story.
+
               </p>
               <p className="text-lg text-brand-700">
-                Today, Natural Puff has grown from that small kitchen experiment to a beloved brand 
-                trusted by health-conscious snackers across the country.
+That moment of discovery—a blend of unique taste, cultural tradition, and natural goodness—became the foundation of Natural Puff. Born from a local crop and nurtured by friendship, our mission is to share the pure, wholesome spirit of Bihar with the world.
               </p>
             </div>
           </div>
@@ -170,7 +170,7 @@ const About = () => {
             <div className="w-full lg:w-1/2">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src="https://res.cloudinary.com/dlvxjnycr/image/upload/v1746701162/dish_wjnf15.png" 
+                  src="https://res.cloudinary.com/dlvxjnycr/image/upload/v1746784524/founder_hvmxub.jpg" 
                   alt="Animesh Doshi, Founder of Natural Puff" 
                   className="w-full h-auto"
                 />
@@ -206,7 +206,7 @@ const About = () => {
             <div className="w-full lg:w-1/2">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src="https://res.cloudinary.com/dlvxjnycr/image/upload/v1746699710/puff_02_gono4m.jpg" 
+                  src="https://res.cloudinary.com/dlvxjnycr/image/upload/v1746784524/Our_Values_ikcqox.jpg" 
                   alt="Natural Puff Values" 
                   className="w-full h-auto"
                 />
@@ -273,7 +273,7 @@ const About = () => {
             <div className="w-full lg:w-1/2">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src="https://res.cloudinary.com/dlvxjnycr/image/upload/v1746701162/dish_wjnf15.png" 
+                  src="https://res.cloudinary.com/dlvxjnycr/image/upload/v1746784525/Our_Quality_rf8w0d.jpg" 
                   alt="Our Quality Commitment" 
                   className="w-full h-auto"
                 />
@@ -318,70 +318,66 @@ const About = () => {
 
           <div className="max-w-4xl mx-auto">
             <div className="relative border-l-4 border-brand-600 ml-6 pl-10 pb-10">
-              {/* 2018 */}
+              {/* 2024 */}
               <div className="mb-12">
                 <div className="absolute -left-6 bg-brand-600 text-white text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center">
                   <span className="mt-0.5">1</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-2 font-playfair">2022 - The Beginning</h3>
+                <h3 className="text-2xl font-bold mb-2 font-playfair">2024 – The Discovery
+</h3>
                 <p className="text-brand-700">
-                  Natural Puff was founded in a small kitchen in Mumbai. First three flavors were developed 
-                  and shared with friends and family.
+In Dharmangal village, Bihar, Animesh first tasted Makhana and, with co-founder Ravi, explored its traditional harvesting and roasting.
+
+
                 </p>
               </div>
 
-              {/* 2019 */}
+              {/* 2024 */}
               <div className="mb-12">
                 <div className="absolute -left-6 bg-brand-600 text-white text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center">
                   <span className="mt-0.5">2</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-2 font-playfair">2022 - First Store</h3>
+                <h3 className="text-2xl font-bold mb-2 font-playfair">2024(Mid) – The Idea is Born</h3>
                 <p className="text-brand-700">
-                  Opened our first retail location in Darbhanga and began partnering with select health food stores.
+Inspired, We launched Natural Puff — blending tradition with wellness to bring ethically sourced Makhana to homes across India and beyond.
+
                 </p>
               </div>
 
-              {/* 2020 */}
+              {/* 2025*/}
               <div className="mb-12">
                 <div className="absolute -left-6 bg-brand-600 text-white text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center">
                   <span className="mt-0.5">3</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-2 font-playfair">2023 - Going Online</h3>
+                <h3 className="text-2xl font-bold mb-2 font-playfair">2025 – Product Dev.</h3>
                 <p className="text-brand-700">
-                  Launched our e-commerce store and expanded our product line to include five new flavors.
+                  From raw to roasted, countless trials led to flavorful, nutritious Makhana in tastes like Black Pepper, Cream & Onion, Peri Peri, and Cheese.
+
                 </p>
               </div>
 
-              {/* 2021 */}
+              {/* 2025 */}
               <div className="mb-12">
                 <div className="absolute -left-6 bg-brand-600 text-white text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center">
                   <span className="mt-0.5">4</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-2 font-playfair">2024 - Expansion</h3>
+                <h3 className="text-2xl font-bold mb-2 font-playfair">2025(Mid) – Going Online</h3>
                 <p className="text-brand-700">
-                  Moved to a larger production facility and began distribution across major cities in India.
+  Natural Puff launched its online store, taking the journey from Darbhanga to the world with easy, direct access for customers everywhere.
+
                 </p>
               </div>
 
-              {/* 2022 */}
-              <div className="mb-12">
-                <div className="absolute -left-6 bg-brand-600 text-white text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center">
-                  <span className="mt-0.5">5</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-2 font-playfair">2024 - Recognition</h3>
-                <p className="text-brand-700">
-                  Won "Best Healthy Snack" award at the National Food Innovation Summit.
-                </p>
-              </div>
 
-              {/* 2023 */}
+              {/* 2025 */}
               <div>
                 <div className="absolute -left-6 bg-gold-500 text-brand-800 text-xl font-bold rounded-full w-12 h-12 flex items-center justify-center">
-                  <span className="mt-0.5">6</span>
+                  <span className="mt-0.5">5</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-2 font-playfair">2025 - Present</h3>
+                <h3 className="text-2xl font-bold mb-2 font-playfair">2025 (Present)</h3>
                 <p className="text-brand-700">
-                  Continuing to innovate with new flavors while maintaining our commitment to quality and sustainability.
+Available online and offline, Natural Puff is uniting conscious snackers with a vision to share Indian superfoods worldwide — one puff at a time.
+
                 </p>
               </div>
             </div>

@@ -877,7 +877,7 @@ const Home = () => {
               },
               {
                 name: "Aisha K.",
-                role: "Mom of Two",
+                role: "Rohit Singh",
                 quote: "Finally found a healthy snack my kids love! The caramel makhana is their favorite, and I feel good about giving them something nutritious.",
                 rating: 4.5
               }

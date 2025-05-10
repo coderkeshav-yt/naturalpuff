@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -59,7 +58,7 @@ const Navbar = () => {
           {/* Logo - Updated to use image */}
           <Link to="/" className="flex items-center" onClick={closeMobileMenu}>
             <img 
-              src="/lovable-uploads/7c1b804f-83e8-4487-a4c1-a45c8af0f957.png" 
+              src="/uploads/7c1b804f-83e8-4487-a4c1-a45c8af0f957.png" 
               alt="Natural Puff Logo" 
               className="h-14" 
             />

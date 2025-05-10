@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Instagram } from 'lucide-react';
 
-// Placeholder images
+
 const blogImage = '/placeholder.svg';
 const authorImage = '/placeholder.svg';
 const relatedBlogImage1 = '/placeholder.svg';
@@ -13,12 +13,12 @@ const relatedBlogImage2 = '/placeholder.svg';
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   
-  // Scroll to top when page loads
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
   
-  // Mock blog data - this would come from Supabase in a real implementation
+ 
   const blogData = {
     title: "The Ancient History of Makhana and Its Cultural Significance",
     excerpt: "Discover the rich history and cultural significance of makhana (lotus seeds) that spans thousands of years across various cultures in India and parts of Eastern Asia.",
@@ -67,7 +67,7 @@ const BlogPost = () => {
     return new Date(dateString).toLocaleDateString('en-US', options);
   };
 
-  // Related posts - mock data
+ 
   const relatedPosts = [
     {
       id: 1,

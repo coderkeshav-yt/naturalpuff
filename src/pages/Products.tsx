@@ -103,7 +103,7 @@ const Products = () => {
     fetchProducts();
   }, []);
 
-  // Helper to ensure only 'Assorted Pack' is in stock and all others are out of stock
+
   const ensureOnlyAssortedPackInStock = (products: Product[]): Product[] => {
     return products.map(product => {
       if (product.name === 'Assorted Pack') {
@@ -148,9 +148,9 @@ const Products = () => {
       if (error) throw error;
 
       if (data) {
-        // Transform data to add ratings, discounts, and Cloudinary images
+ 
         let productsWithImages = data.map(product => {
-          // Get a random Cloudinary image URL
+ 
           const randomImageUrl = cloudinaryImages[Math.floor(Math.random() * cloudinaryImages.length)];
           return {
             ...product,
@@ -159,7 +159,7 @@ const Products = () => {
             discount_percent: Math.floor(Math.random() * 10) + 5
           };
         });
-        // Ensure only 'Assorted Pack' is in stock
+      
         productsWithImages = ensureOnlyAssortedPackInStock(productsWithImages);
         setProducts(productsWithImages);
       }
@@ -172,7 +172,7 @@ const Products = () => {
 
   const openProductDetails = (product: Product) => {
     setSelectedProduct(product);
-    // Set default variant if product has variants
+  
     if (product.variants && product.variants.length > 0) {
       setSelectedVariant(product.variants[0].size);
     }
@@ -214,7 +214,7 @@ const Products = () => {
   };
 
   const handleBuyNow = (product: Product) => {
-    // Check if user is logged in
+
     if (!user) {
       toast({
         title: "Please log in",
@@ -230,7 +230,7 @@ const Products = () => {
       ? `${product.name} (${selectedVariant})`
       : product.name;
       
-    // Add to cart and immediately go to checkout
+ 
     addItem({
       id: product.id,
       name: productName,
@@ -242,7 +242,7 @@ const Products = () => {
     navigate('/checkout');
   };
   
-  // Filter products based on search and filter options
+
   const filteredProducts = products
     .filter(product => 
       product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||

@@ -7,6 +7,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { motion } from 'framer-motion';
 import { Star, ChevronRight, CheckCircle, Calendar, Gift } from 'lucide-react';
 import { ImageCarousel } from '@/components/ui/image-carousel';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 
 // Product interface
 interface Product {
@@ -72,6 +73,21 @@ const Home = () => {
       type: "event"
     }
   ];
+
+  // Cresoul images (simulate reading from /public/creosol/)
+  const cresoulImages = [
+    '/creosol/1.jpg',
+    '/creosol/2.jpg',
+    '/creosol/3.jpg',
+    // Add more as needed
+  ];
+  const [cresoulIndex, setCresoulIndex] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCresoulIndex((prev) => (prev + 1) % cresoulImages.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [cresoulImages.length]);
 
   useEffect(() => {
     fetchFeaturedProducts();
@@ -344,23 +360,7 @@ const Home = () => {
                   </div>
                 </div>
                 
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8, duration: 0.8 }}
-                  className="absolute top-5 -left-8 bg-white/90 backdrop-blur py-2 px-4 rounded-full shadow-lg"
-                >
-                  <div className="flex items-center">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-gold-500 text-gold-500" />
-                      ))}
-                    </div>
-                    <span className="ml-2 text-sm font-medium">
-                      200+ Reviews
-                    </span>
-                  </div>
-                </motion.div>
+
                 
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}

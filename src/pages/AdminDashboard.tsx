@@ -10,6 +10,7 @@ import CouponManagement from '@/components/admin/CouponManagement';
 import OrdersManagement from '@/components/admin/OrdersManagement';
 import UserManagement from '@/components/admin/UserManagement';
 import DashboardOverview from '@/components/admin/DashboardOverview';
+import CresoulManagement from '@/components/admin/CresoulManagement';
 
 const ADMIN_USER_ID = 'a3301900-bf5e-4afe-a114-d59bb08a05a1';
 
@@ -28,41 +29,40 @@ const AdminDashboard = () => {
       return;
     }
 
-    // Check if user is an admin
+  
     checkIfAdmin();
   }, [user, navigate]);
 
   const checkIfAdmin = async () => {
     setIsLoading(true);
     try {
-      // For this application, we're using a specific user ID as admin
+   
       if (user?.id === ADMIN_USER_ID) {
         setIsAdmin(true);
         
-        // Test if the RLS policies are working
+      
         try {
           const { error } = await supabase
             .from('orders')
             .select('id')
             .limit(1);
-          
-          // If there's no error, RLS is working correctly
+   
           if (!error) {
             setShowRlsWarning(false);
           }
         } catch (orderError) {
           console.error("Error checking orders access:", orderError);
-          // Keep warning shown
+      
         }
         
-        // Check if we can create and update RLS policies for coupon management
+ 
         try {
           await ensureCouponPolicies();
         } catch (couponError) {
           console.error("Error configuring coupon policies:", couponError);
         }
       } else {
-        // If not the admin user, redirect to home
+
         toast({
           title: "Unauthorized",
           description: "You don't have permission to access this page.",
@@ -108,7 +108,7 @@ const AdminDashboard = () => {
   }
 
   if (!isAdmin) {
-    return null; // Don't render anything until we verify admin status
+    return null; 
   }
 
   return (
@@ -128,6 +128,7 @@ const AdminDashboard = () => {
           <TabsTrigger value="orders" className="text-base whitespace-nowrap">Orders</TabsTrigger>
           <TabsTrigger value="users" className="text-base whitespace-nowrap">Users</TabsTrigger>
           <TabsTrigger value="coupons" className="text-base whitespace-nowrap">Coupons</TabsTrigger>
+          <TabsTrigger value="cresoul" className="text-base whitespace-nowrap">Cresoul Management</TabsTrigger>
         </TabsList>
         
         <TabsContent value="overview">
@@ -144,6 +145,10 @@ const AdminDashboard = () => {
         
         <TabsContent value="coupons">
           <CouponManagement />
+        </TabsContent>
+        
+        <TabsContent value="cresoul">
+          <CresoulManagement />
         </TabsContent>
       </Tabs>
     </div>
